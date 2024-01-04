@@ -1,0 +1,159 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Display Board</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+  
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap ">AVCOE - Display Board</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+        <li>
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./table.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Overview</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  <div class="bg-blue-800 min-h-full p-10 content-center">
+    <div id="alert">
+      
+    </div>
+    <div class="p-7 max-w-md bg-white rounded-lg border border-gray-500 shadow-md mx-2">
+      <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Update Form</h5>
+      </a>
+      <br>
+      <form>
+        <div class="mb-6">
+          <div class="flex flex-row">
+            <div class="basis-1/2 pr-2.5">
+              <label for="countries"
+                class="block mb-2 text-sm font-medium text-gray-900 ">Year</label>
+              <select id="year"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option>SE</option>
+                <option>TE</option>
+                <option>BE</option>
+              </select>
+            </div>
+            <div class="basis-1/2 pl-2.5">
+              <label for="division" class="block mb-2 text-sm font-medium text-gray-900">Div</label>
+              <select id="division"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option>A</option>
+                <option>B</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+          <select id="subject"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            
+          </select>
+        </div>
+        <div class="mb-6">
+          <label for="time" class="block mb-2 text-sm font-medium text-gray-900">Select
+            Timeslot</label>
+          <select id="time"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <option>9:00 am - 9:55 am</option>
+            <option>9:55 am - 10:50 am</option>
+            <option>10:50 am - 11:10 am</option>
+            <option>11:10 am - 12:05 pm</option>
+            <option>12:05 pm - 1:00 pm</option>
+            <option>1:00 pm - 2:00 pm</option>
+            <option>2:00 pm - 2:55 pm</option>
+            <option>2:55 pm - 3:50 pm</option>
+            <option>3:50 pm -  4:45 pm</option>
+            <option>4:45 pm - 5:40 pm</option>
+            <option>5:40 pm - 12:00 am</option>
+          </select>
+        </div>
+        <!--<div class="mb-6">
+          <label for="staff" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Name of Staff</label>
+          <select id="staff"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            
+          </select>
+        </div>-->
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Name of Staff</label>
+          <input id="professor"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Ex- A.B.Lastname">
+        </div>
+
+        <div class="mb-6">
+          <div class="flex flex-row">
+            <div class="basis-1/2 pr-2.5">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Day</label>
+              <select id="day"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option>Sunday</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+              </select>
+            </div>
+
+             <div class="basis-1/2 pr-2.5">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Classroom</label>
+              <select id="classroom"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button id="updateButton"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Update</button>
+        
+      </form>
+      
+        <button id="resetButton"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Reset DB</button>
+
+    </div>
+    
+
+  </div>
+  
+  <script src="./script.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <!--<script src="script2.js" type="module"></script>-->
+
+</body>
+
+</html>
